@@ -32,6 +32,7 @@
 > Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 4. Установка Elasticsearch
+
 Копируем себе публичный ключ репозитория
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
