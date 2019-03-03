@@ -56,9 +56,11 @@
 Установка Kibana на Debian или Ubuntu. Добавляем публичный ключ:
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+    
 Добавляем репозиторий Kibana:
 
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
+    
 Запускаем установку Kibana:
 
     apt update && apt install kibana
