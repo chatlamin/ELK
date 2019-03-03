@@ -1,9 +1,9 @@
-За основу взята инструкция https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
+##За основу взята инструкция https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/
 
 Работоспособность проверена на виртуальной машине Ubuntu-16.04.6-server-amd64 (http://releases.ubuntu.com/16.04/)
 
-+ Устанавливаем Ubuntu
-+ Устанавливаем дополнительные программы
+####Устанавливаем Ubuntu
+####Устанавливаем дополнительные программы
 
    nmon по желанию.  
 
