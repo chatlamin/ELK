@@ -1,6 +1,17 @@
 ## За основу взята [инструкция](https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/)
 
-Работоспособность проверена на виртуальной машине [Ubuntu-16.04.6-server-amd64](http://releases.ubuntu.com/16.04/)
+Работоспособность проверена на сборке:
++ OS: Ubuntu-16.04.6-server-amd64
++ Java: 1.8.0_201
++ Kibana: 6.6.1
++ Elasticsearch: 6.6.1
++ Logstash: 6.6.1
++ Winlogbeat: 6.6.1
++ Windows server 2012 R2 (RU)
++ D-Link: 7.02.B051
++ Mikrotik: 6.43.11
+
+
 
 #### Устанавливаем Ubuntu
 #### Устанавливаем дополнительные программы
@@ -97,7 +108,7 @@ Logstash устанавливается из того же репозитори�
 
 Запускаем по очереди все службы:
 
-Elasticsearch:
+  *Elasticsearch:
 
     systemctl start elasticsearch.service
 Проверяем, запустился ли он:
@@ -107,7 +118,7 @@ Elasticsearch:
 Стартует не сразу. Ждем, пока не появится запись:
 > tcp6       0      0 :::9200                 :::*                    LISTEN      7494/java
 
-Kibana:
+  *Kibana:
 
     systemctl start kibana.service
 Проверяем состояние запущенного сервиса:
@@ -118,6 +129,6 @@ Kibana:
     netstat -tulnp | grep 5601
 > tcp        0      0 127.0.0.1:5601          0.0.0.0:*               LISTEN      27401/node
 
-Logstash:
+  *Logstash:
 
     systemctl start logstash.service
