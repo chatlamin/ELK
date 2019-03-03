@@ -1,17 +1,21 @@
 ## За основу взята [инструкция](https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/)
 
-Работоспособность проверена на сборке:
+Работоспособность проверена на сборке
+
+Сервер:
+
 + OS: Ubuntu-16.04.6-server-amd64
 + Java: 1.8.0_201
 + Kibana: 6.6.1
 + Elasticsearch: 6.6.1
 + Logstash: 6.6.1
+
+Агенты:
+
 + Winlogbeat: 6.6.1
 + Windows server 2012 R2 (RU)
 + D-Link: 7.02.B051
 + Mikrotik: 6.43.11
-
-
 
 #### Устанавливаем Ubuntu
 #### Устанавливаем дополнительные программы
