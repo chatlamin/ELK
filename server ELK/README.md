@@ -35,9 +35,11 @@
 Копируем себе публичный ключ репозитория
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+    
 Добавляем репозиторий Elasticsearch в систему:
 
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
+    
 Устанавливаем Elasticsearch на Debian или Ubuntu:
 
     apt update && apt-get install elasticsearch
