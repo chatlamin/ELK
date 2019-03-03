@@ -108,6 +108,7 @@ Elasticsearch:
     netstat -tulnp | grep 9200
 Стартует не сразу. Ждем, пока не появится запись:
 > tcp6       0      0 :::9200                 :::*                    LISTEN      7494/java
+
 Kibana:
 
     systemctl start kibana.service
@@ -118,6 +119,7 @@ Kibana:
 
     netstat -tulnp | grep 5601
 > tcp        0      0 127.0.0.1:5601          0.0.0.0:*               LISTEN      27401/node
+
 Logstash:
 
     systemctl start logstash.service
