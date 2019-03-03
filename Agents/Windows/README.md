@@ -13,9 +13,7 @@
 
 У меня был такой вывод:
 
-Status   Name               DisplayName
-------   ----               -----------
-Stopped  winlogbeat         winlogbeat
+> Stopped  winlogbeat         winlogbeat
 
 Служба установилась и в данный момент она остановлена. Правим конфигурационный файл winlogbeat.yml. Я его привел к такому [виду](https://github.com/chatlamin/ELK/blob/master/Agents/Windows/winlogbeat.yml)
 
