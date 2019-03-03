@@ -5,10 +5,10 @@
 #### Устанавливаем Ubuntu
 #### Устанавливаем дополнительные программы
 
-    sudo apt install mc
-    sudo apt install nmon
-    sudo apt update
-    sudo apt upgrade
+    apt install mc
+    apt install nmon
+    apt update
+    apt upgrade
     reboot
 #### Установка Java 8
 
