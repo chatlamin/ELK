@@ -80,6 +80,8 @@
 Logstash устанавливается из того же репозитория, как Elasticsearch и Kibana.
 
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
+Запускаем установку Logstash:
+
     apt update && apt install logstash
 Добавляем Logstash в автозагрузку.
 
