@@ -13,7 +13,7 @@
 Агенты:
 
 + Winlogbeat: 6.6.1
-+ Windows server 2012 R2 (RU)
++ Windows: Windows server 2012 R2 (RU)
 + D-Link: 7.02.B051
 + Mikrotik: 6.43.11
 
