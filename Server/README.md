@@ -5,7 +5,7 @@
 1. Устанавливаем Ubuntu
 2. Устанавливаем дополнительные программы
 
-  (nmon по желанию)  
+  (nmon по желанию).  
   
     sudo apt install mc
     sudo apt install nmon
