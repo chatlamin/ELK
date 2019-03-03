@@ -73,6 +73,7 @@
 
 
 7. Настройка Kibana
+
 Настройки Kibana описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Kibana)
 
 8. Установка Logstash
