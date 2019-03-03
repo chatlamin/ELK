@@ -50,9 +50,11 @@
     systemctl enable elasticsearch.service 
 
 5. Настройка Elasticsearch
+
 Настройки Elasticsearch описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/elasticsearch)
 
 6. Установка Kibana
+
 Установка Kibana на Debian или Ubuntu. Добавляем публичный ключ:
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
