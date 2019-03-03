@@ -5,14 +5,12 @@
 #### Устанавливаем Ubuntu
 #### Устанавливаем дополнительные программы
 
-   nmon по желанию.  
-
     sudo apt install mc
     sudo apt install nmon
     sudo apt update
     sudo apt upgrade
     reboot
-+ Установка Java 8
+#### Установка Java 8
 
 Подключаем репозиторий с Java 8.
 
@@ -31,7 +29,7 @@
 
 > Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
-⋅⋅*Установка Elasticsearch
+#### Установка Elasticsearch
 
 Копируем себе публичный ключ репозитория
 
@@ -49,11 +47,11 @@
     systemctl daemon-reload 
     systemctl enable elasticsearch.service 
 
-+ Настройка Elasticsearch
+##### Настройка Elasticsearch
 
 Настройки Elasticsearch описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/elasticsearch)
 
-+ Установка Kibana
+#### Установка Kibana
 
 Установка Kibana на Debian или Ubuntu. Добавляем публичный ключ:
 
@@ -72,11 +70,11 @@
     systemctl enable kibana.service
 
 
-+ Настройка Kibana
+##### Настройка Kibana
 
 Настройки Kibana описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Kibana)
 
-+ Установка Logstash
+#### Установка Logstash
 
 Logstash устанавливается из того же репозитория, как Elasticsearch и Kibana.
 
@@ -89,13 +87,13 @@ Logstash устанавливается из того же репозитори�
     systemctl daemon-reload
     systemctl enable logstash.service
 
-+ Настройка Logstash
+##### Настройка Logstash
 
 Настройки Logstash описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Logstash)
 
 Можете проверить на всякий случай лог /var/log/logstash/logstash-plain.log, чтобы убедиться в том, что все в порядке.
 
-#### Запуск
+### Запуск
 
 Запускаем по очереди все службы:
 
