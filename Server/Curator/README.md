@@ -18,6 +18,10 @@
     mkdir /etc/curator
     touch /etc/curator/action.yml
     touch /etc/curator/config.yml
+[action.yml](https://github.com/chatlamin/ELK/blob/master/Server/Curator/action.yml)
+
+[config.yml](https://github.com/chatlamin/ELK/blob/master/Server/Curator/config.yml)
+
 
 Обращаю внимание на форматирование файла. Отступы в начале строки важны. Они должны быть именно такие, как у меня в примере.
 
