@@ -1,4 +1,4 @@
-## За основу взята [инструкция](https://serveradmin.ru/ustanovka-i-nastroyka-elasticsearch-logstash-kibana-elk-stack/)
+## За основу берется серия статей  [ELK Stack](https://serveradmin.ru/category/elk-stack//)
 
 Работоспособность проверена на сборке
 
