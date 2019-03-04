@@ -31,5 +31,5 @@
 В консоли увидите информативный вывод выполняемых команд по очистке индексов. После завершения очистки, не забудьте добавить задание в cron.
 
     crontab -e
-    4 4 * * * /usr/local/bin/curator --config /etc/curator/config.yml /etc/curator/action.yml
+    4 4 * * * /usr/bin/curator --config /etc/curator/config.yml /etc/curator/action.yml
 Очистка индексов будет выполняться каждый день в 4 утра.
