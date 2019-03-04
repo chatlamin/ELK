@@ -13,7 +13,7 @@
 
 Должен быть такой вывод:
 
-> Stopped  winlogbeat         winlogbeat
+    Stopped  winlogbeat         winlogbeat
 
 Служба установилась и в данный момент она остановлена. Правим конфигурационный файл winlogbeat.yml. Я его привел к такому [виду](https://github.com/chatlamin/ELK/blob/master/Agents/Windows/winlogbeat.yml)
 
@@ -29,3 +29,5 @@
 Management -> Advanced Settings -> Default columns вписать
 
      computer_name, host, message  
+
+> Столбец host понадобится для удобного просмотра агентов Network equipment
