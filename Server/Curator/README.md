@@ -16,8 +16,8 @@
 Сделаем для примера простое задание на закрытие и удаление индексов с шаблоном winsrv-* старше 30-ти дней. Для этого создадим директорию для конфигов curator и сами конфиги.
 
     mkdir /etc/curator
-    touch /etc/curator/[action.yml](https://github.com/chatlamin/ELK/blob/master/Server/Curator/action.yml)
-    touch /etc/curator/[config.yml](https://github.com/chatlamin/ELK/blob/master/Server/Curator/config.yml)
+    touch /etc/curator/action.yml
+    touch /etc/curator/config.yml
 
 Обращаю внимание на форматирование файла. Отступы в начале строки важны. Они должны быть именно такие, как у меня в примере.
 
