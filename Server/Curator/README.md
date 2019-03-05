@@ -1,4 +1,4 @@
-### Очистка elasticsearch с помощью curator
+### Очистка elasticsearch с помощью [curator](https://www.elastic.co/guide/en/elasticsearch/client/curator/5.6/index.html)
 
 #### Подключаем репозиторий в Debian 8/Ubuntu
 
