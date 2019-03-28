@@ -16,6 +16,8 @@
 + Windows: Windows server 2012 R2 (RU)
 + D-Link: 7.02.B051
 + Mikrotik: 6.43.11
++ Ubuntu server 18.04
++ Filebeat: 6.7.0
 
 #### Устанавливаем Ubuntu
 #### Устанавливаем дополнительные программы
