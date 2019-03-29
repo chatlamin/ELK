@@ -38,10 +38,8 @@
 
     java -version
 Мой вывод:
-> java version "1.8.0_201"
-
-> Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
-
+> java version "1.8.0_201"  
+> Java(TM) SE Runtime Environment (build 1.8.0_201-b09)  
 > Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
 ## Установка Elasticsearch
@@ -59,8 +57,8 @@
     apt update && apt-get install elasticsearch
 После установки добавляем elasticsearch в автозагрузку.
 
-    systemctl daemon-reload 
-    systemctl enable elasticsearch.service 
+    systemctl daemon-reload
+    systemctl enable elasticsearch.service
 
 ## Установка Kibana
 
@@ -134,7 +132,7 @@ Logstash устанавливается из того же репозитори�
 
     systemctl start logstash.service
 ___
-Откройте Kibana (http://192.168.0.16:5601) Management -> Index Patterns
+Откройте [Kibana](http://192.168.0.16:5601) Management -> Index Patterns
 
 Вы должны увидеть новые индексы с именем ubuntu-(Текущая Дата). В поле Index pattern введите ubuntu-* и нажмите Next Step. На следующем этапе выберите имя поля для временного фильтра. У вас будет только один вариант — @timestamp, выбирайте его и жмите Create Index Pattern.
 Выбираем в левом меню пункт Discover, где вы должны увидеть логи, которые пришли с ubuntu агента.
