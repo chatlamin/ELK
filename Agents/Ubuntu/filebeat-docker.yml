@@ -1,0 +1,7 @@
+filebeat.inputs:
+- type: docker
+  containers.ids:
+    - '*'
+  tags: ["docker"]
+output.logstash:
+  hosts: ["192.168.0.16:5044"]

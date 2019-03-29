@@ -1,6 +1,4 @@
-## За основу берется серия статей  [ELK Stack](https://serveradmin.ru/category/elk-stack//)
-
-Работоспособность проверена на сборке
+# ELK Stack
 
 Сервер:
 
@@ -12,22 +10,22 @@
 
 Агенты:
 
-+ Winlogbeat: 6.6.1
-+ Windows: Windows server 2012 R2 (RU)
++ Windows: Windows server 2012 R2 (RU) + Winlogbeat: 6.6.1
 + D-Link: 7.02.B051
 + Mikrotik: 6.43.11
-+ Ubuntu server 18.04
-+ Filebeat: 6.7.0
++ Ubuntu server 18.04 + Filebeat: 6.7.0 + Docker: 18.09
 
-#### Устанавливаем Ubuntu
-#### Устанавливаем дополнительные программы
+## [Устанавливаем Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server#0)
+
+## Устанавливаем дополнительные программы
 
     apt install mc
     apt install nmon
     apt update
     apt upgrade
     reboot
-#### Установка Java 8
+
+## Установка Java 8
 
 Подключаем репозиторий с Java 8.
 
@@ -46,16 +44,16 @@
 
 > Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 
-#### Установка Elasticsearch
+## Установка Elasticsearch
 
 Копируем себе публичный ключ репозитория
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-    
+
 Добавляем репозиторий Elasticsearch в систему:
 
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
-    
+
 Устанавливаем Elasticsearch на Debian или Ubuntu:
 
     apt update && apt-get install elasticsearch
@@ -64,20 +62,16 @@
     systemctl daemon-reload 
     systemctl enable elasticsearch.service 
 
-##### Настройка Elasticsearch
-
-Настройки Elasticsearch описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/elasticsearch)
-
-#### Установка Kibana
+## Установка Kibana
 
 Установка Kibana на Debian или Ubuntu. Добавляем публичный ключ:
 
     wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-    
+
 Добавляем репозиторий Kibana:
 
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
-    
+
 Запускаем установку Kibana:
 
     apt update && apt install kibana
@@ -86,12 +80,7 @@
     systemctl daemon-reload
     systemctl enable kibana.service
 
-
-##### Настройка Kibana
-
-Настройки Kibana описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Kibana)
-
-#### Установка Logstash
+## Установка Logstash
 
 Logstash устанавливается из того же репозитория, как Elasticsearch и Kibana.
 
@@ -104,17 +93,23 @@ Logstash устанавливается из того же репозитори�
     systemctl daemon-reload
     systemctl enable logstash.service
 
-##### Настройка Logstash
+### Настройка Elasticsearch
+
+Настройки Elasticsearch описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/elasticsearch)
+
+### Настройка Kibana
+
+Настройки Kibana описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Kibana)
+
+### Настройка Logstash
 
 Настройки Logstash описаны [тут](https://github.com/chatlamin/ELK/tree/master/server%20ELK/Logstash)
 
-Можете проверить на всякий случай лог /var/log/logstash/logstash-plain.log, чтобы убедиться в том, что все в порядке.
-
-### Запуск
+#### Запуск
 
 Запускаем по очереди все службы:
 
-###### Elasticsearch:
+##### Elasticsearch
 
     systemctl start elasticsearch.service
 Проверяем, запустился ли он:
@@ -124,7 +119,7 @@ Logstash устанавливается из того же репозитори�
 Стартует не сразу. Ждем, пока не появится запись:
 > tcp6       0      0 :::9200                 :::*                    LISTEN      7494/java
 
-###### Kibana:
+##### Kibana
 
     systemctl start kibana.service
 Проверяем состояние запущенного сервиса:
@@ -135,6 +130,19 @@ Logstash устанавливается из того же репозитори�
     netstat -tulnp | grep 5601
 > tcp        0      0 127.0.0.1:5601          0.0.0.0:*               LISTEN      27401/node
 
-###### Logstash:
+##### Logstash
 
     systemctl start logstash.service
+___
+Откройте Kibana (http://192.168.0.16:5601) Management -> Index Patterns
+
+Вы должны увидеть новые индексы с именем ubuntu-(Текущая Дата). В поле Index pattern введите ubuntu-* и нажмите Next Step. На следующем этапе выберите имя поля для временного фильтра. У вас будет только один вариант — @timestamp, выбирайте его и жмите Create Index Pattern.
+Выбираем в левом меню пункт Discover, где вы должны увидеть логи, которые пришли с ubuntu агента.
+
+Для удобного просмотра рекомендую сделать настройку столбцов:
+
+Management -> Advanced Settings -> Default columns вписать
+
+    host.name, message
+
+[Источник](https://serveradmin.ru/category/elk-stack/)

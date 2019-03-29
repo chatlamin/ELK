@@ -5,6 +5,8 @@
 Для настройки централизованного сервера сбора логов с Ubuntu серверов, установим сборщика системных логов filebeat.
 Для этого [скачаем его](https://www.elastic.co/downloads/beats/filebeat) и установим в качестве службы.
 
+CLI:
+
     curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.7.0-amd64.deb
     apt install filebeat
 После установки добавляем в автозагрузку
@@ -14,18 +16,20 @@
 
 ## Настройка
 
-После установки рисуем примерно такой конфиг /etc/filebeat/filebeat.yml для отправки логов в logstash.
+Конфиг для отправки логов в logstash находится по этому пути /etc/filebeat/filebeat.yml
+
+[Пример конфигурации](https://github.com/chatlamin/ELK/blob/master/Agents/Ubuntu/filebeat-ubuntu.yml)
+
+[Источник](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html)
 
 ## Запуск
 
     systemctl start filebeat
-Откройте Kibana (http://192.168.0.16:5601) Management -> Index Patterns
 
-Вы должны увидеть новые индексы с именем ubuntu-(Текущая Дата). В поле Index pattern введите ubuntu-* и нажмите Next Step. На следующем этапе выберите имя поля для временного фильтра. У вас будет только один вариант — @timestamp, выбирайте его и жмите Create Index Pattern.
-Выбираем в левом меню пункт Discover, где вы должны увидеть логи, которые пришли с ubuntu агента.
+## Docker
 
-Для удобного просмотра рекомендую сделать настройку столбцов:
+Для чтения журналов из контейнеров Docker, ищем журналы контейнеров /var/lib/docker/containers
 
-Management -> Advanced Settings -> Default columns вписать
+[Пример конфигурации](https://github.com/chatlamin/ELK/blob/master/Agents/Ubuntu/filebeat-docker.yml)
 
-    host.name, message  
+[Источник](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-docker.html)
