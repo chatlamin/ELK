@@ -3,5 +3,7 @@ filebeat.inputs:
   containers.ids:
     - '*'
   tags: ["docker"]
+  processors:
+    - add_docker_metadata: ~
 output.logstash:
   hosts: ["192.168.0.16:5044"]
