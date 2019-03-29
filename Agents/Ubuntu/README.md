@@ -33,3 +33,5 @@ CLI:
 [Пример конфигурации](https://github.com/chatlamin/ELK/blob/master/Agents/Ubuntu/filebeat-docker.yml)
 
 [Источник](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-docker.html)
+
+[Про metadata](https://www.elastic.co/guide/en/beats/filebeat/current/add-docker-metadata.html)
