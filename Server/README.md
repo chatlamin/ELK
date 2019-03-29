@@ -141,8 +141,6 @@ ___
 
 Для удобного просмотра рекомендую сделать настройку столбцов:
 
-Management -> Advanced Settings -> Default columns вписать
-
-    host.name, message
+Management -> Advanced Settings -> Default columns
 
 [Источник](https://serveradmin.ru/category/elk-stack/)
