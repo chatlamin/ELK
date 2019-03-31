@@ -11,7 +11,7 @@
 
     docker pull docker.elastic.co/logstash/logstash:6.7.0
 
-Запускаем (перед запуском скопируй [конфиг1](), [конфиг2]())
+Запускаем (перед запуском скопируй [конфиг1](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/config/logstash.yml), [конфиг2](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/pipeline/logstash.conf))
 
     docker run --name logstash \
         --detach \

@@ -9,7 +9,7 @@
 
     docker pull docker.elastic.co/elasticsearch/elasticsearch:6.7.0
 
-Запускаем (перед запуском скопируй [конфиг]())
+Запускаем (перед запуском скопируй [конфиг](https://github.com/chatlamin/ELK/blob/master/Docker-server/Elasticsearch/elasticsearch.yml))
 
     docker run --name elasticsearch \
         --detach \
@@ -25,5 +25,3 @@
 [Источник](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
 
 [Источник](https://discuss.elastic.co/t/elastic-elasticsearch-docker-not-assigning-permissions-to-data-directory-on-run/65812)
-
-

@@ -9,7 +9,7 @@
 
     docker pull docker.elastic.co/kibana/kibana:6.7.0
 
-Запускаем (перед запуском скопируй [конфиг]())
+Запускаем (перед запуском скопируй [конфиг](https://github.com/chatlamin/ELK/blob/master/Docker-server/Kibana/kibana.yml))
 
     docker run --name kibana \
         --detach \
