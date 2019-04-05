@@ -2,8 +2,8 @@
 
 Выносим на хост машину конфиг-файл
 
-    sudo mkdir -p /home/dock/containers/kibana/config
-    sudo touch /home/dock/containers/kibana/config/kibana.yml
+    sudo mkdir -p /home/docker/containers/kibana/config
+    sudo touch /home/docker/containers/kibana/config/kibana.yml
 
 Скачиваем образ kibana (в примере версия 6.7.0)
 
@@ -16,7 +16,7 @@
         --link elasticsearch:elasticsearch \
         --volume /etc/localtime:/etc/localtime:ro \
         --volume /etc/timezone:/etc/timezone:ro \
-        --volume /home/dock/containers/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml \
+        --volume /home/docker/containers/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml \
         --publish 5601:5601 \
         docker.elastic.co/kibana/kibana:6.7.0
 

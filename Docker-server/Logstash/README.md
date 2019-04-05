@@ -2,10 +2,10 @@
 
 Выносим на хост машину конфиг-файлы
 
-    sudo mkdir -p /home/dock/containers/logstash/config
-    sudo mkdir -p /home/dock/containers/logstash/pipeline
-    sudo touch /home/dock/containers/logstash/config/logstash.yml
-    sudo touch /home/dock/containers/logstash/pipeline/logstash.conf
+    sudo mkdir -p /home/docker/containers/logstash/config
+    sudo mkdir -p /home/docker/containers/logstash/pipeline
+    sudo touch /home/docker/containers/logstash/config/logstash.yml
+    sudo touch /home/docker/containers/logstash/pipeline/logstash.conf
 
 Скачиваем образ logstash (в примере версия 6.7.0)
 
@@ -18,8 +18,8 @@
         --link elasticsearch:elasticsearch \
         --volume /etc/localtime:/etc/localtime:ro \
         --volume /etc/timezone:/etc/timezone:ro \
-        --volume /home/dock/containers/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml \
-        --volume /home/dock/containers/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
+        --volume /home/docker/containers/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml \
+        --volume /home/docker/containers/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
         --publish 5044:5044 \
         --publish 5514:5514/udp \
         docker.elastic.co/logstash/logstash:6.7.0
