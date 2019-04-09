@@ -9,12 +9,13 @@
 
 Скачиваем образ logstash (в примере версия 6.7.0)
 
-    docker pull docker.elastic.co/logstash/logstash:6.7.0
+    docker pull docker.elastic.co/logstash/logstash-oss:6.7.0
 
 Запускаем (перед запуском скопируй [конфиг1](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/config/logstash.yml), [конфиг2](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/pipeline/logstash.conf))
 
     docker run --name logstash \
         --detach \
+        --restart=always \
         --link elasticsearch:elasticsearch \
         --volume /etc/localtime:/etc/localtime:ro \
         --volume /etc/timezone:/etc/timezone:ro \
@@ -22,7 +23,7 @@
         --volume /home/docker/containers/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
         --publish 5044:5044 \
         --publish 5514:5514/udp \
-        docker.elastic.co/logstash/logstash:6.7.0
+        docker.elastic.co/logstash/logstash-oss:6.7.0
 
 [Источник](https://github.com/deviantony/docker-elk/tree/master/logstash)
 
