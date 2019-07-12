@@ -7,9 +7,9 @@
     sudo touch /home/docker/containers/logstash/config/logstash.yml
     sudo touch /home/docker/containers/logstash/pipeline/logstash.conf
 
-Скачиваем образ logstash (в примере версия 6.7.0)
+Скачиваем образ logstash (в примере версия 7.2.0)
 
-    docker pull docker.elastic.co/logstash/logstash-oss:6.7.0
+    docker pull docker.elastic.co/logstash/logstash-oss:7.2.0
 
 Запускаем (перед запуском скопируй [конфиг1](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/config/logstash.yml), [конфиг2](https://github.com/chatlamin/ELK/blob/master/Docker-server/Logstash/pipeline/logstash.conf))
 
@@ -23,7 +23,7 @@
         --volume /home/docker/containers/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
         --publish 5044:5044 \
         --publish 5514:5514/udp \
-        docker.elastic.co/logstash/logstash-oss:6.7.0
+        docker.elastic.co/logstash/logstash-oss:7.2.0
 
 [Источник](https://github.com/deviantony/docker-elk/tree/master/logstash)
 
