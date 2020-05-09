@@ -15,7 +15,7 @@ mkdir -p $PATH_CONF
 cp -r ./container $PATH_CONF
 
 docker run \
-    --name logstash \
+    --name $NAME \
     --detach \
     --restart always \
     --link elasticsearch:elasticsearch \
@@ -27,4 +27,4 @@ docker run \
     --publish 5514:5514/udp \
     chatlamin/logstash:latest
 
-docker logs --follow logstash
+docker logs --follow $NAME

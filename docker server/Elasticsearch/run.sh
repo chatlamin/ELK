@@ -15,7 +15,7 @@ mkdir -p $PATH_CONF
 cp -r ./container $PATH_CONF
 
 docker run \
-    --name elasticsearch \
+    --name $NAME \
     --detach \
     --restart always \
     --volume /etc/localtime:/etc/localtime:ro \
@@ -27,4 +27,4 @@ docker run \
     --publish 9300:9300 \
     chatlamin/elasticsearch:latest
 
-docker logs --follow elasticsearch
+docker logs --follow $NAME

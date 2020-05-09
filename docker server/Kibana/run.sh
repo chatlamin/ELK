@@ -15,7 +15,7 @@ mkdir -p $PATH_CONF
 cp -r ./container $PATH_CONF
 
 docker run \
-    --name kibana \
+    --name $NAME \
     --detach \
     --restart always \
     --link elasticsearch:elasticsearch \
@@ -25,4 +25,4 @@ docker run \
     --publish 5601:5601 \
     chatlamin/kibana:latest
 
-docker logs --follow kibana
+docker logs --follow $NAME
