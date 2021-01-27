@@ -17,7 +17,7 @@ cp -r ./container $PATH_CONF
 docker run \
     --name $NAME \
     --detach \
-    --restart always \
+    --restart unless-stopped \
     --link elasticsearch:elasticsearch \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
