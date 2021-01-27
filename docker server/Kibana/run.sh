@@ -16,7 +16,7 @@ cp -r ./container $PATH_CONF
 
 docker run \
     --name $NAME \
-    --label test=1234567911 \
+    --label test=123456791111 \
     --detach \
     --restart unless-stopped \
     --link elasticsearch:elasticsearch \
