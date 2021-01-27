@@ -17,7 +17,7 @@ cp -r ./container $PATH_CONF
 docker run \
     --name $NAME \
     --detach \
-    --restart always \
+    --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $PATH_CONF/container/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
