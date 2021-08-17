@@ -1,4 +1,6 @@
-# ELK
+# the repository is not supported. the project has moved to [serverhome](https://github.com/chatlamin/serverhome)
+
+## ELK
 
 Это аббревиатура из названий трех продуктов: Elasticsearch, Logstash и Kibana. Это три продукта с открытым кодом, которые в некоторый момент времени стали принадлежать одной компании и развиваться в одном направлении.
 
